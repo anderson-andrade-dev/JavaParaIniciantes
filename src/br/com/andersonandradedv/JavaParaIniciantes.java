@@ -1,5 +1,4 @@
 package br.com.andersonandradedv;
-
 import java.util.Map;
 
 /**
@@ -13,6 +12,10 @@ public class JavaParaIniciantes {
 
         //método para chamar o segundo programa pagina 27 do livro
         segundoPrograma();
+
+       // Valor do intervalo 7.2 conforme indicado no desafio
+       // Programa da pagina 38 do livro
+        terceiroPrograma(7.2);
     }
 
     private static void primeiroPrograma() {
@@ -56,5 +59,18 @@ public class JavaParaIniciantes {
                 System.out.printf(String.format(str3, key, map.get(key)));
             }
         }
+    }
+
+    private static void terceiroPrograma(double intervalo) {
+        String str = """
+                A distancia de um relâmpago em pés com um intervalo de : %s\s
+                é de: %s
+                """;
+        var distancia = new CalculaDistanciaRelampago(intervalo).distanciaRelampagoEmPes();
+        System.out.println("\n----------Programa Calcular Relâmpago em Pés--------------");
+        System.out.println(String.format(str,intervalo,distancia));
+
+
+
     }
 }
