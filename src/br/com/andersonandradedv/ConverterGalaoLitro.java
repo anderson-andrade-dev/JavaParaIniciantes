@@ -10,12 +10,12 @@ package br.com.andersonandradedv;
  * Compile o programa com javac
  * Execute o programa com java
  */
-public class ConverterGalaoLitro {
+public class ConverterGalaoLitro implements Converte {
     //Constante com o valor referente a 1 galão
     private static final double VALOR_REFERENCIA_GALAO = 3.78544;
 
     // Método que converte a quantidade de galões e devolve o valor em litros
-    public double converte(double qtdGalao){
+    public double converter(double qtdGalao){
         return qtdGalao* VALOR_REFERENCIA_GALAO;
     }
 }

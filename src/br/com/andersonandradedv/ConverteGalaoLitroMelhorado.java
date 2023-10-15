@@ -14,17 +14,17 @@ import java.util.Map;
  * galões, uma linha em branco será exibida.
  */
 public class ConverteGalaoLitroMelhorado {
-    Converte converte;
-
+    Converte galoesLitro;
     public ConverteGalaoLitroMelhorado(Converte converte) {
-        this.converte = converte;
+        this.galoesLitro = converte;
     }
 
-    public Map<Double, Double> listaGalaoLitro() {
-        var galoesLitros = new HashMap<Double, Double>();
+    //método para criar um map com as conversões de galão para litro.
+    public Map<Integer, Double> listaGalaoLitro() {
+        var galoesLitros = new HashMap<Integer, Double>();
 
-        for (i=1; i <= 100; i++) {
-           galoesLitros.put(i,converte.converter(i));
+        for (int i=1; i <= 100; i++) {
+           galoesLitros.put(i,galoesLitro.converter(i));
         }
 
         return galoesLitros;
